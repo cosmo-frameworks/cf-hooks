@@ -1,7 +1,7 @@
 {
   "name": "cf-hooks-lib",
   "author": "Ridel Saavedra Flores",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Librería de hooks de Cosmo Frameworks.",
   "main": "./dist/index.js",
