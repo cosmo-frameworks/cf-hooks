@@ -1,7 +1,7 @@
 # ⚛️ cf-hooks
 
 [![Build Status](https://github.com/cosmo-frameworks/cf-hooks/actions/workflows/publish.yml/badge.svg)](https://github.com/tu-usuario/cf-hooks/actions)
-[![Coverage](https://img.shields.io/badge/coverage-80%25-green)](./coverage)
+[![codecov](https://codecov.io/github/cosmo-frameworks/cf-hooks/graph/badge.svg?token=9NLJ1LS7W5)](https://codecov.io/github/cosmo-frameworks/cf-hooks)
 [![License](https://img.shields.io/npm/l/cf-hooks)](./LICENSE.md)
 [![npm](https://img.shields.io/npm/v/cf-hooks)](https://www.npmjs.com/package/cf-hooks)
 
