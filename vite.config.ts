@@ -6,8 +6,8 @@ export default defineConfig(() => ({
   build: {
     lib: {
       entry: "src/index.ts",
-      name: "ReactHooksLib",
-      fileName: (format) => `react-hooks-lib.${format}.js`,
+      name: "CFHooksLib",
+      fileName: (format) => `cf-hooks-lib.${format}.js`,
     },
     rollupOptions: {
       external: ["react"],
@@ -22,6 +22,7 @@ export default defineConfig(() => ({
       provider: "v8",
       reporter: ["text", "json", "html"],
       exclude: [
+        "check-coverage.js",
         "node_modules/",
         "src/setupTests.ts",
         "**/index.ts",

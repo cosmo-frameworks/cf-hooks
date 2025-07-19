@@ -1,9 +1,9 @@
 {
-  "name": "cf-hooks",
+  "name": "cf-hooks-lib",
   "author": "Ridel Saavedra Flores",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Librería profesional de hooks personalizados para React",
+  "description": "Librería de hooks de Cosmo Frameworks.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -13,13 +13,18 @@
   "engines": {
     "node": ">=10"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "check:coverage": "node check-coverage.js",
+    "prepublishOnly": "yarn test:coverage && yarn check:coverage"
   },
   "peerDependencies": {
     "react": "^18.0.0",

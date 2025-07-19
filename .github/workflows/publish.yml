@@ -10,7 +10,9 @@ on:
 
 jobs:
   test:
+    name: Run Tests and Coverage
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -31,9 +33,11 @@ jobs:
         run: node check-coverage.js
 
   publish:
+    name: Publish to NPM
     needs: test
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -47,10 +51,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build package
+      - name: Build the package
         run: npm run build
 
-      - name: Publish to NPM
+      - name: Publish package to NPM
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
