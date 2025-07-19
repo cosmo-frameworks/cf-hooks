@@ -4,12 +4,12 @@ import { renderHook, act } from "@testing-library/react";
 import { useDebounce } from "../src/hooks/useDebounce";
 
 describe("useDebounce", () => {
-  it("debe devolver el valor inicial inmediatamente", () => {
+  it("should return the initial value immediately.", () => {
     const { result } = renderHook(() => useDebounce("test", 500));
     expect(result.current).toBe("test");
   });
 
-  it("debe actualizar el valor después del retraso", async () => {
+  it("should update the value after the delay.", async () => {
     vi.useFakeTimers();
     const { result, rerender } = renderHook(
       ({ value }) => useDebounce(value, 500),

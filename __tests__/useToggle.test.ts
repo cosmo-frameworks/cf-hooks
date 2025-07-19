@@ -1,21 +1,22 @@
-import { describe, it, expect } from 'vitest';
-import { renderHook, act } from '@testing-library/react';
-import { useToggle } from '../src/hooks/useToggle';
+import { describe, it, expect } from "vitest";
+import { renderHook, act } from "@testing-library/react";
 
-describe('useToggle', () => {
-  it('debe iniciar con false por defecto', () => {
+import { useToggle } from "../src/hooks/useToggle";
+
+describe("useToggle", () => {
+  it("should start with false by default.", () => {
     const { result } = renderHook(() => useToggle());
     const [value] = result.current;
     expect(value).toBe(false);
   });
 
-  it('debe aceptar un valor inicial true', () => {
+  it("should accept an initial value of true.", () => {
     const { result } = renderHook(() => useToggle(true));
     const [value] = result.current;
     expect(value).toBe(true);
   });
 
-  it('debe alternar el valor con toggle()', () => {
+  it("should toggle the value with toggle().", () => {
     const { result } = renderHook(() => useToggle());
     const [, toggle] = result.current;
 
@@ -32,7 +33,7 @@ describe('useToggle', () => {
     expect(result.current[0]).toBe(false);
   });
 
-  it('debe activar y desactivar con setOn() y setOff()', () => {
+  it("should activate and deactivate with setOn() and setOff().", () => {
     const { result } = renderHook(() => useToggle());
     const [, , setOn, setOff] = result.current;
 

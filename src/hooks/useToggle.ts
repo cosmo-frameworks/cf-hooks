@@ -1,5 +1,4 @@
-import { useCallback, useState } from "react";
-
+import React from "react";
 
 /**
  * A custom React hook that manages a boolean state and provides functions to toggle, set on, or set off the state.
@@ -15,11 +14,11 @@ import { useCallback, useState } from "react";
 export function useToggle(
   initial = false
 ): [boolean, () => void, () => void, () => void] {
-  const [value, setValue] = useState(initial);
+  const [value, setValue] = React.useState(initial);
 
-  const toggle = useCallback(() => setValue((v) => !v), []);
-  const setOn = useCallback(() => setValue(true), []);
-  const setOff = useCallback(() => setValue(false), []);
+  const toggle = React.useCallback(() => setValue((v) => !v), []);
+  const setOn = React.useCallback(() => setValue(true), []);
+  const setOff = React.useCallback(() => setValue(false), []);
 
   return [value, toggle, setOn, setOff];
 }
