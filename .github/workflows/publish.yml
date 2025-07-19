@@ -31,6 +31,14 @@ jobs:
 
       - name: Check 80% coverage threshold
         run: node check-coverage.js
+        
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/coverage-final.json
+          flags: unittests
+          name: codecov-coverage
 
   publish:
     name: Publish to NPM
