@@ -12,7 +12,7 @@ Librería profesional de **React Hooks reutilizables**, diseñados para mejorar 
 npm install cf-hooks-lib
 ```
 
-> **⚠️ Esta librería requiere react como peerDependency. Asegúrate de tener React 18+ instalado en tu proyecto.**
+> **⚠️ Esta librería requiere react como peerDependency. Asegúrate de tener React y React Dom 16+ instalado en tu proyecto.**
 
 ## 🧩 Hooks disponibles
 
